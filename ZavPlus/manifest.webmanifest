@@ -1,0 +1,24 @@
+{
+"manifest_version": 3,
+"name": "EXTENSION NAME",
+"description": "DESCRIPTION",
+"version": "1.0",
+"permissions": ["storage", "activeTab", "scripting", "tabs", "webNavigation"],
+"action": {
+"default_icon": "./icon.png",
+"default_popup": "./window.html"
+},
+"content_scripts": [
+    {
+      "js": ["scripts/content.js"],
+      "matches": [
+        "https://student.zav.cz/*",
+        "https://developer.chrome.com/docs/extensions/*",
+        "https://developer.chrome.com/docs/webstore/*"
+      ]
+    }
+],
+"host_permissions": [
+
+]
+}
